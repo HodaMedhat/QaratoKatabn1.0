@@ -1,0 +1,26 @@
+
+
+Scaffold-DbContext "Server=.;Database=ENG;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir "Data"  -Context "ENGDbContext" -force
+
+
+
+/////////////////////////////////////////////
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+
+    
+try
+{
+   string c = Directory.GetCurrentDirectory();
+IConfigurationRoot configuration =
+    new ConfigurationBuilder().SetBasePath(c).AddJsonFile("appsettings.json").Build();
+
+optionsBuilder.UseSqlServer(configuration.GetConnectionString("DBConnection"));
+}
+catch
+{
+    //ignore
+}}
+
+------------------------------------
+A_tem
