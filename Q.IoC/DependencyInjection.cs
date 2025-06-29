@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Q.Reporsitory.Mapping;
+using Q.Service.Service.Generic;
+using Q.VM.ViewModels;
+using Q.Service.Service.LookUps;
+using Q.Reporsitory.Reporsitory.Generic;
+using Q.Reporsitory.Reporsitory.LookUps;
 
 
 namespace Q.IoC
@@ -15,8 +20,11 @@ namespace Q.IoC
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services,IConfiguration configuration)
         {
-            //services.AddScoped<IGenericRepo<DistrictVM>, DistrictRepo>();
-            //services.AddScoped<IGenericService<DistrictVM>, DistrictService>();
+            //////LookUps
+            ///LkFormat
+            services.AddScoped<IGenericRepo<LkFormatVM>, LkFormatRepo>();
+            services.AddScoped<IGenericService<LkFormatVM>, LkFormatService>();
+            /////
 
             //Auto Mapper Configurations
             var mapperConfig = new MapperConfiguration(mc =>

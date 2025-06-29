@@ -19,8 +19,11 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\Q.EF\Q.EF.csproj" />
+		<ProjectReference Include="..\Q.Reporsitory\Q.Reporsitory.csproj" />
+		<ProjectReference Include="..\Q.IoC\Q.IoC.csproj" />
+		<ProjectReference Include="..\Q.VM\Q.VM.csproj" />
+	</ItemGroup>
+	
 </Project>

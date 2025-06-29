@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Reporsitory\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Q.EF\Q.EF.csproj" />
     <ProjectReference Include="..\Q.VM\Q.VM.csproj" />
   </ItemGroup>
