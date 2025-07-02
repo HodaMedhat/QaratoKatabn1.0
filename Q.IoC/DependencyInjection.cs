@@ -25,6 +25,10 @@ namespace Q.IoC
             services.AddScoped<IGenericRepo<LkFormatVM>, LkFormatRepo>();
             services.AddScoped<IGenericService<LkFormatVM>, LkFormatService>();
             /////
+            //////LkPubilsher
+            services.AddScoped<IGenericRepo<LkPubilsherVM>, LkPubilsherRepo>();
+            services.AddScoped<IGenericService<LkPubilsherVM>, LkPubilsherService>();
+            /////
 
             //Auto Mapper Configurations
             var mapperConfig = new MapperConfiguration(mc =>
