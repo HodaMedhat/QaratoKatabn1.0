@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 
@@ -53,7 +51,7 @@ public partial class QARATOKATABNContext : DbContext
         try
         {
             string c = Directory.GetCurrentDirectory();
-            IConfigurationRoot configuration =new ConfigurationBuilder().SetBasePath(c).AddJsonFile("appsettings.json").Build();
+            IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(c).AddJsonFile("appsettings.json").Build();
 
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("DBConnection"));
         }

@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Q.VM.HelperClasses;
+﻿using Q.VM.HelperClasses;
 
 namespace Q.Service.Service.Generic
 {
     public interface IGenericService<TEntity>
     {
-        public decimal Add(TEntity entity);
-        public decimal Update(TEntity entity);
-        public decimal Deactivate(int id);
-        public IList<CustomOption> GetDropList(string id = "0");
-        public IList<TEntity> GetAllList(int id = 0);
-        public TEntity Find(int id);
+        public Task<decimal> Add(TEntity entity);
+        public Task<decimal> Update(TEntity entity);
+        public Task<decimal> Deactivate(int id);
+        public Task<IList<CustomOption>> GetDropList(string id = "0");
+        public Task<IList<TEntity>> GetAllList(int id = 0);
+        public Task<TEntity> Find(int id);
     }
 }

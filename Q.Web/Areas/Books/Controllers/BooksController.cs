@@ -4,11 +4,11 @@ namespace Q.Web.Areas.Books.Controllers
 {
     public class BooksController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }

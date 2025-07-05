@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
-using Q.EF;
 using Q.EF.Models;
-using Q.VM;
 using Q.VM.ViewModels;
 
 namespace Q.Reporsitory.Mapping
 {
-    public class MappingProfile :Profile
+    public class MappingProfile : Profile
     {
-        public MappingProfile() { 
+        public MappingProfile()
+        {
             CreateMap<BookMaster, BookMasterVM>().ReverseMap();
             CreateMap<BooksDetail, BooksDetailVM>().ReverseMap();
             CreateMap<BorrowingBook, BorrowingBookVM>().ReverseMap();
@@ -23,15 +22,15 @@ namespace Q.Reporsitory.Mapping
             CreateMap<UserLibrary, UserLibraryVM>().ReverseMap();
             CreateMap<User, UserVM>().ReverseMap();
             CreateMap<Warning, WarningVM>().ReverseMap();
-            
-            
-          
-           
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
         }
     }
 }

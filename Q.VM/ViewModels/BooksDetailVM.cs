@@ -1,13 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Q.VM.ViewModels
+﻿namespace Q.VM.ViewModels
 {
     public class BooksDetailVM
     {
@@ -25,7 +16,7 @@ namespace Q.VM.ViewModels
 
         public int? Pubilsher { get; set; }
 
-      
+
         public int? Isdn { get; set; }
 
         public string? AoT { get; set; }
